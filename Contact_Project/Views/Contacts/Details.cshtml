@@ -1,0 +1,122 @@
+﻿@using Contact_Project.Models
+@model Contact
+
+@{
+    ViewBag.Title = "Contact Details";
+}
+
+<!-- Add CSS reference -->
+<link rel="stylesheet" href="~/Content/style.css" />
+
+<div class="details-container">
+    <h2 class="section-title">Basic Information</h2>
+
+    <div class="details-grid">
+        <!-- Left Column -->
+        <div class="details-column">
+            <p><strong>Contact Name:</strong> @Model.FirstName @Model.LastName</p>
+            <p>
+                <strong>Organization:</strong>
+                @if (string.IsNullOrEmpty(Model.Organization))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to add</a>
+                }
+                else
+                {
+                    @Model.Organization
+                }
+            </p>
+            <p>
+                <strong>Phone:</strong>
+                @if (string.IsNullOrEmpty(Model.Phone))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to add</a>
+                }
+                else
+                {
+                    <span class="phone-value">@Model.Phone</span>
+                }
+            </p>
+            <p>
+                <strong>Website:</strong>
+                @if (string.IsNullOrEmpty(Model.Website))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })" class="text-primary">Click to add</a>
+                }
+                else
+                {
+                    <a href="@(Model.Website.StartsWith("http://") || Model.Website.StartsWith("https://") ? Model.Website : "https://" + Model.Website)"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="website-link text-primary">
+                        @Model.Website
+                    </a>
+                }
+            </p>
+
+
+            <p>
+                <strong>Job Title:</strong>
+                @if (string.IsNullOrEmpty(Model.JobTitle))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to add</a>
+                }
+                else
+                {
+                    @Model.JobTitle
+                }
+            </p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="details-column">
+            <p>
+                <strong>Contact Type:</strong>
+                @if (string.IsNullOrEmpty(Model.ContactType))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to Select Type</a>
+                }
+                else
+                {
+                    @Model.ContactType
+                }
+            </p>
+            <p>
+                <strong>Emails:</strong>
+                @if (string.IsNullOrEmpty(Model.Email))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to add</a>
+                }
+                else
+                {
+                    @Model.Email
+                }
+            </p>
+            <p>
+                <strong>Address:</strong>
+                @if (string.IsNullOrEmpty(Model.Address))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to add</a>
+                }
+                else
+                {
+                    @Model.Address
+                }
+            </p>
+            <p>
+                <strong>Department:</strong>
+                @if (string.IsNullOrEmpty(Model.Department))
+                {
+                    <a href="@Url.Action("Edit", "Contacts", new { id = Model.Id })">Click to add</a>
+                }
+                else
+                {
+                    @Model.Department
+                }
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Back to List -->
+<p class="back-link">@Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })</p>

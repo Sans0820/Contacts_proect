@@ -1,0 +1,87 @@
+﻿
+.details-container {
+    max-width: 800px;
+    margin: 40px auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 40px; /* Added top padding */
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Two-column layout */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Individual columns */
+.details-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Text and label styles */
+p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+    p strong {
+        display: inline-block;
+        width: 160px;
+        font-weight: 600;
+        color: #555;
+    }
+
+.phone-value {
+    font-style: italic;
+    color: #333;
+}
+
+/* Link styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/* Website link */
+.website-link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff;
+    word-break: break-word;
+}
+
+/* Back link styling */
+.back-link {
+    text-align: right;
+    margin-top: 20px;
+}
+
+    .back-link a {
+        font-size: 14px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+
+        .back-link a:hover {
+            background-color: #0056b3;
+        }

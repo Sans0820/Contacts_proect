@@ -1,0 +1,81 @@
+﻿/* Container styling for the index page */
+.index-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Actions row styling */
+.actions-row {
+    display: flex;
+    justify-content: space-between; /* Keeps the buttons spaced properly */
+    margin-bottom: 20px;
+}
+
+    /* Padding and margin for the buttons inside the actions row */
+    .actions-row .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+/* Space between the actions row and the search box */
+.search-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .contacts-table th, .contacts-table td {
+        text-align: left;
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+
+    .contacts-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    .contacts-table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .contacts-table input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+/* Search box styling */
+.search-box .input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.search-box .form-control {
+    flex: 1;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+.search-box .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+}
